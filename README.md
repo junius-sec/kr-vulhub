@@ -1,6 +1,6 @@
 # Apache Commons Text 원격 코드 실행 취약점 (CVE-2022-42889)
 
-이 저장소는 Apache Commons Text의 원격 코드 실행 취약점 (CVE-2022-42889, 일명 **"Text4Shell"**) 을 시연하는 Docker 기반 환경을 제공합니다.
+Apache Commons Text의 원격 코드 실행 취약점 (CVE-2022-42889, 일명 **"Text4Shell"**) 을 시연하는 Docker 기반 환경을 제공합니다.
 
 ---
 
